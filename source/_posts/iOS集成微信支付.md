@@ -1,0 +1,109 @@
+---
+title: iOS集成微信支付
+date: 2017-01-08 17:24:49
+categories: iOS
+---
+一、开发前准备
+
+iOS微信支付SDK下载地址
+https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419319164&lang=zh_CN
+
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151231111110339-1634755497.png)<!--more-->
+
+二、 集成微信支付
+
+1、解压WeChatSDK1.6.2_Sample.zip（忽略版本号）(这个是微信支付的Demo)
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151231111416714-1682903190.png)
+
+2、创建个文件夹，找到如下文件，放到文件夹里。便于将文件统一拷入项目
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151231111547464-684733242.png)
+
+3、创建项目并将微信支付SDK添加进项目（项目创建不再演示）
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151225092710390-1194839116.png)
+
+4、导入系统库（不导入编译不通过会报错）
+``` objc 
+SystemConfiguration.framework
+
+libz.tbd 
+
+libsqlite3.0.tbd
+
+CoreTelephony.framework
+```
+
+5、修改info.plist文件
+``` objc 
+//iOS 9系统策略更新，限制了http协议的访问，此外应用需要在“Info.plist”中将要使用的URL Schemes列为白名单，才可正常检查其他应用是否安装。
+//受此影响，当你的应用在iOS 9中需要使用微信SDK的相关能力（分享、收藏、支付、登录等）时，需要在“Info.plist”里增加如下代码：
+<key>LSApplicationQueriesSchemes</key>
+<array>
+<string>weixin</string>
+</array>
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+```
+
+6、注册微信支付
+``` objc 
+//导入头文件
+#import "WXApi.h"
+#import "WXApiManager.h"
+```
+在AppDelegate里
+``` objc 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+```
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151231112301792-107443187.png)
+![](http://images2015.cnblogs.com/blog/714996/201512/714996-20151231112820589-113602910.png)
+
+``` objc
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+```
+
+7、调用微信支付
+``` objc
+#pragma mark -- 微信支付 --
+- (void)WeChatPay{
+
+    PayReq *req   = [[PayReq alloc] init];
+
+    /** 由用户微信号和AppID组成的唯一标识，发送请求时第三方程序必须填写，用于校验微信用户是否换号登录*/
+    req.openID = @"";//服务器返回
+
+    /** 商家向财付通申请的商家id */
+    req.partnerId = @"";//服务器返回
+
+    /** 预支付订单 */
+    req.prepayId  = @"";//服务器返回
+
+    /** 商家根据财付通文档填写的数据和签名 */
+    req.package   = @"";//服务器返回 注意iOS只能是 Sign=WXPay 即req.package = Sign=WXPay
+
+    /** 随机串，防重发 */
+    req.nonceStr  = @"";//服务器返回
+
+    /** 时间戳，防重发 */
+    NSString * stamp = @"";//服务器返回
+    req.timeStamp = stamp.intValue;
+
+    /** 商家根据微信开放平台文档对数据做的签名 */
+    req.sign = @"";//服务器返回
+
+    // 在支付之前，如果应用没有注册到微信，应该先调用IWXMsg.registerApp将应用注册到微信
+    [WXApi registerApp:@""];
+
+    //发送请求到微信，等待微信返回onResp
+    [WXApi sendReq:req];
+
+}
+```

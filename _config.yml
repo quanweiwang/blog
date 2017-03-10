@@ -4,8 +4,8 @@
 
 # Site
 title: iOSer | 王权伟の博客
-subtitle:
-description: 桃李不言 下自成蹊
+subtitle: 好记性不如烂笔头
+description: 好记性不如烂笔头
 author: 王权伟
 language: zh-Hans
 timezone:
@@ -13,9 +13,9 @@ avatar: /images/avatar.png
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://wangquanwei.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title.html
 permalink_defaults:
 
 # Directory
@@ -75,5 +75,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
     type: git
-    repo: https://github.com/quanweiwang/quanweiwang.github.io.git
+    repo:
+        github: https://github.com/quanweiwang/quanweiwang.github.io.git
+        coding: https://git.coding.net/wangquanwei/wangquanwei.git
     branch: master

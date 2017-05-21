@@ -1,8 +1,16 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="baidu-site-verification" content="n1Fxha51bY" />
-<meta name="google-site-verification" content="CnfyuWLAJaBycXiHVHkCfGLzqW5JiUIMAZGBbRd8iRs" />
+
+
+{% if theme.han %}
+  {% set Han_uri = url_for(theme.vendors._internal + '/Han/dist/han.min.css?v=3.3') %}
+  {% if theme.vendors.Han %}
+    {% set Han_uri = theme.vendors.Han %}
+  {% endif %}
+  <link rel="stylesheet" media="all" href="{{ Han_uri }}">
+{% endif %}
+
 
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -11,6 +19,11 @@
 
 {% if theme.google_site_verification %}
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
+{% endif %}
+
+
+{% if theme.yandex_site_verification %}
+  <meta name="yandex-verification" content="{{ theme.yandex_site_verification }}" />
 {% endif %}
 
 

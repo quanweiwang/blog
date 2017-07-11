@@ -10,7 +10,7 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      {% set display_toc = is_post and theme.toc.enable %}
+      {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
 
       {% if display_toc and toc(page.content).length > 1 %}
         <ul class="sidebar-nav motion-element">
@@ -32,7 +32,7 @@
            {% if theme.seo %}
               <p class="site-description motion-element" itemprop="description">{{ theme.signature }}</p>
            {% else %}
-              <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+              <p class="site-description motion-element" itemprop="description">{{ theme.subtitle }}</p>
           {% endif %}
         </div>
         <nav class="site-state motion-element">

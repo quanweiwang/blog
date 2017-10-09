@@ -6,7 +6,7 @@
 favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, NexT, iOS开发, iOS, 个人博客"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -199,7 +199,7 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  display: always
   #display: always
   #display: hide
   #display: remove
@@ -216,13 +216,14 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: 友情链接
+links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
-
-
+links:
+  拿根针尖对麦芒: https://xnxy.github.io/zhouwei/
+  web前端开发: http://blog.wangyangde.cn/
+  杨晓平の博客: https://guyueyang.github.io/
+  
 # ---------------------------------------------------------------
 # Post Settings
 # ---------------------------------------------------------------

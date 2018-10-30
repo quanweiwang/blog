@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.2"
+    "version": "3.8.0"
   },
   "dependencies": {
-    "hexo": "^3.3.8",
+    "hexo": "^3.8.0",
     "hexo-baidu-url-submit": "0.0.5",
+    "hexo-deployer-ftpsync": "^0.1.1",
     "hexo-deployer-git": "^0.2.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-baidu-sitemap": "^0.1.2",

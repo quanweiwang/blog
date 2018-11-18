@@ -6,11 +6,9 @@ comments: false
 ---
 
 # 基本资料
-
->  学历：本科  
->  届别：2016 届
+> 学历：本科  
+届别：2016 届
 
 # 联系方式
-
 > Github：https://github.com/quanweiwang  
-> 博客：http://www.wangquanwei.com
+博客：http://www.wangquanwei.com

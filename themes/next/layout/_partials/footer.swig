@@ -26,7 +26,7 @@
 
 <div class=BbeiAn-info">
   {{ __('闽ICP备') }} -
-  <a href="http://www.miitbeian.gov.cn/">18024834号</a>
+  <a href="http://www.miitbeian.gov.cn/">18024834号-1</a>
   </a>
 </div>
 {% endif %}

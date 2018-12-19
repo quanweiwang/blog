@@ -147,9 +147,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
+# social:
   #LinkLabel: Link
-  GitHub: https://github.com/quanweiwang
+  #GitHub: https://github.com/quanweiwang
 
 # Social Links Icons
 # Icon Mapping:
@@ -200,7 +200,7 @@ sidebar:
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
   #display: post
-  #display: always
+  display: always
   #display: hide
   #display: remove
 
@@ -216,13 +216,13 @@ sidebar:
 
 
 # Blog rolls
-links_title: 友情链接
-links_layout: block
+#links_title: 友情链接
+#links_layout: block
 #links_layout: inline
-links:
-  拿根针尖对麦芒: https://xnxy.github.io/
-  web前端开发: http://blog.wangyangde.cn/
-  杨晓平の博客: https://guyueyang.github.io/
+#links:
+#  拿根针尖对麦芒: https://xnxy.github.io/
+#  web前端开发: http://blog.wangyangde.cn/
+#  杨晓平の博客: https://guyueyang.github.io/
   
 # ---------------------------------------------------------------
 # Post Settings

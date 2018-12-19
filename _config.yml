@@ -73,6 +73,11 @@ baidu_analytics: 5a6672e8545f0d238d33c35a4f4f89f5
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# Advert
+advert: /images/250-250.png
+advert_link: https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=j42eulwe
+advert_text: 点击领取最高￥1888云产品通用代金券
+
 baidu_url_submit:
     count: 1 ## 提交最新的一个链接
     host: www.wangquanwei.com ## 在百度站长平台中注册的域名

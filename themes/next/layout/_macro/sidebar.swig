@@ -120,6 +120,17 @@
           </div>
         {% endif %}
 
+        {% if config.advert %}
+          <div class="site-author motion-element" itemprop="advert" itemscope itemtype="http://schema.org/Person">
+            <a href="{{url_for( config.advert_link )}}" target="_blank">
+              <img class="site-advert-image" itemprop="image"
+                  src="{{ url_for( config.advert) }}"
+                  alt="{{ config.advert }}" />
+              <p class="site-advert-name" itemprop="name">{{ config.advert_text }}</p>
+            </a>
+          </div>
+        {% endif %}
+
         {% include '../_custom/sidebar.swig' %}
 
       </section>

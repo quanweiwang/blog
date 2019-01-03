@@ -71,7 +71,7 @@ baidu_analytics: 5a6672e8545f0d238d33c35a4f4f89f5
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: diaspora
 
 # Advert
 advert: /images/250-250.png

@@ -4,6 +4,24 @@ menu:
   Github: https://github.com/quanweiwang
 # Twitter: https://twitter.com/FechinLi
 
+# Specify the date when the site was setup
+since: 2016
+
+# count values only if the other configs are false
+busuanzi_enable: true
+# custom uv span for the whole site
+busuanzi_site_uv: false
+busuanzi_site_uv_header: 本站访客数
+busuanzi_site_uv_footer: 人次
+# custom pv span for the whole site
+busuanzi_site_pv: true
+busuanzi_site_pv_header: 本站总访问量
+busuanzi_site_pv_footer: 次
+# custom pv span for one page only
+busuanzi_page_pv: true
+busuanzi_page_pv_header: 本文总阅读量
+busuanzi_page_pv_footer: 次
+
 # 是否显示目录
 TOC: false
 
@@ -17,7 +35,7 @@ mp3:
   - https://link.hhtjim.com/qq/003MNjHn3MgszW.mp3
 
 # 首页封面图, 为空时取文章的cover作为封面
-welcome_cover: /img/welcome_cover.png
+welcome_cover: /img/welcome_cover.jpg
 
 # 默认文章封面图
 cover: /img/cover.jpg
@@ -51,7 +69,7 @@ keywords: 王权伟
 google_analytics: 
 
 # 网站ico
-favicon: /img/avatar.png
+favicon: /img/avatar.jpg
 
 # rss文件
 rss: atom.xml

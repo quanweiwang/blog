@@ -7,7 +7,7 @@ title: 王权伟の博客
 subtitle: 好记性不如烂笔头
 description: 好记性不如烂笔头
 author: 王权伟
-language: zh-Hans
+language: zh-CN
 timezone:
 avatar: /images/avatar.png
 
@@ -71,7 +71,7 @@ baidu_analytics: 5a6672e8545f0d238d33c35a4f4f89f5
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: diaspora
+theme: next
 
 # Advert
 advert: /images/250-250.png

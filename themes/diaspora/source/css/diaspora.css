@@ -90,9 +90,10 @@ body.mu .icon-logo {color:#333;}
 .menu li {font-size:20px;display:inline-block;margin:0 20px 20px 0;}
 .menu a {color:#666;letter-spacing:1px;}
 .menu a:hover {color:#333;}
-.nav p {color:#999;font-size:12px;position:absolute;width:100%;text-align:center;bottom:30px;}
+.nav p {color:#999;font-size:12px;position:absolute;width:100%;text-align:center;bottom:30px;line-height:20px;}
 .nav p a {color:#999;text-decoration:underline;}
 .nav p:first-letter {font-family:sans-serif;}
+.nav span{color: #666;}
 #container {padding-bottom:100px;overflow:hidden;position:relative;}
 #container:before {content:'';display:block;width:1px;height:200%;position:absolute;left:50%;background:#eaeaea;top:-50%;z-index:0;}
 #primary {position:relative;}

@@ -194,6 +194,7 @@ var Diaspora = {
         id.style.left = (_width - parseInt(id.style.width)) / 2 +'px';
         id.style.top = (_height - parseInt(id.style.height)) / 2 +'px';
     }
+
 };
 
 $(function() {

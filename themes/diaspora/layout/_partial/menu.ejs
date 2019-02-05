@@ -7,10 +7,16 @@
         <%}%>
     </ul>
     <p id="copyright">
-        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.
+        &copy; <%= theme.since %> - <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.
         Powered by <%- link_to("http://hexo.io/", "Hexo", {external: true})%>
         Theme <%- link_to("https://github.com/Fechin/hexo-theme-diaspora", "Diaspora", {external: true})%>
-        by Fechin
-        Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        by Fechin <br>
+
+        Hosted by <%- link_to("https://pages.coding.me", "Coding Pages", {external: true})%> <br>
     </p>
+
+     
+
 </div>
+
+

@@ -14,6 +14,6 @@ comments: false
 [taobao-sdk-PYTHON-auto_1486971200958-20180409](https://github.com/quanweiwang/taobao-sdk-PYTHON-auto_1486971200958-20180409)：基于python3的淘宝客SDK。
 
 ### 关于小站
-小站搭载 Hexo 动力系统，配合 Next 金属漆，五菱宏光 / 思域见了都得让三分。早在 2016 年我就开始写博客，当时由 jekyll 强力驱动，小打小闹，质量不佳。
+小站搭载 Hexo 动力系统，配合 NexT 金属漆，五菱宏光 / 思域见了都得让三分。早在 2016 年我就开始写博客，当时由 jekyll 强力驱动，小打小闹，质量不佳。
 
 坚持原创技术分享。
